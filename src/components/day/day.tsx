@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import styles from "./day.module.css"
 
 function Day() {
   const [weekDay, setWeekDay] = useState('');
@@ -10,8 +11,9 @@ function Day() {
   }, []);
 
   return (
-    <p>{weekDay}</p>
+    <p className={styles.text}>{weekDay}</p>
   )
 };
 
 export default Day;
+

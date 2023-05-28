@@ -7,23 +7,31 @@ import WeekNumber from '../week-number/week-number';
 import Rates from '../rates/rates';
 import { city } from '../../utils/constants';
 import ThemeToggle from '../theme-toggle/theme-toggle';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import { ThemeContext } from '../../services/context/context';
 
 function App() {
+  const [theme, setTheme] = useState<string>(styles.light);
+
+  const toggleTheme = () => {
+    setTheme((currentTheme) => currentTheme === styles.light ? styles.dark : styles.light);
+  }
 
   return (
-    <div className={styles.main}>
-      <Weather />
-      <h2 className={styles.city}>{city}</h2>
-      <section>
-        <Time />
-        <Day />
-        <Today />
-        <WeekNumber />
-        <Rates />
-        <ThemeToggle />
-      </section>
-    </div>
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      <div className={styles.main} id={theme}>
+        <Weather />
+        <h2 className={styles.city}>{city}</h2>
+        <section>
+          <Time />
+          <Day />
+          <Today />
+          <WeekNumber />
+          <Rates />
+          <ThemeToggle />
+        </section>
+      </div>
+    </ThemeContext.Provider>
   );
 }
 

@@ -38,7 +38,7 @@ export interface ICurrentWeather {
     gust_mph: number,
     gust_kph: number,
   }
-}
+};
 
 export interface ICurrancyResponse {
     base: string,
@@ -48,4 +48,9 @@ export interface ICurrancyResponse {
     },
     success: boolean,
     timestamp: number,
-}
+};
+
+export type TThemeContent = {
+  theme: string
+  toggleTheme:(c: string) => void
+};

@@ -1,12 +1,15 @@
 import { useState } from 'react';
 import styles from './theme-toggle.module.css'
+import { useGlobalContext } from '../../services/context/context';
 
 function ThemeToggle() {
   const [darkMode, setdarkMode] = useState<boolean>(false);
+  const { theme, toggleTheme } = useGlobalContext();
 
   const changeMode = () => {
     setdarkMode(!darkMode);
-  }
+    toggleTheme(theme)
+  };
 
   return (
     <div className={styles.toggle}>
