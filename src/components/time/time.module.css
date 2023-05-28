@@ -1,0 +1,27 @@
+.time {
+  display: flex;
+  justify-content: center;
+}
+
+.colon {
+  width: 5px;
+  animation: blink 2s linear infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0%;
+  }
+  25% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 100%;
+  }
+  75% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
