@@ -12,16 +12,18 @@ import { ThemeContext } from '../../services/context/context';
 
 function App() {
   const [theme, setTheme] = useState<string>(styles.light);
+  const [cityColorLight, setCityColorLight] = useState(false);
 
   const toggleTheme = () => {
     setTheme((currentTheme) => currentTheme === styles.light ? styles.dark : styles.light);
+    setCityColorLight(!cityColorLight);
   }
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div className={styles.main} id={theme}>
         <Weather />
-        <h2 className={styles.city}>{city}</h2>
+        {!cityColorLight ? <h2 className={styles.city_dark}>{city}</h2> : <h2 className={styles.city_white}>{city}</h2>}
         <section>
           <Time />
           <Day />

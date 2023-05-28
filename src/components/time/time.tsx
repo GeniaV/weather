@@ -1,8 +1,12 @@
 import { useEffect, useState } from "react";
 import styles from './time.module.css';
+import { useGlobalContext } from "../../services/context/context";
+import appStyles from '../app/app.module.css';
 
 function Time() {
   const [time, setTime] = useState(getFormattedTime());
+  const [textColorLight, seTextColorLight] = useState(false);
+  const { theme } = useGlobalContext();
 
   useEffect(() => {
     const timeInterval = setInterval(() => {
@@ -13,6 +17,16 @@ function Time() {
       clearInterval(timeInterval);
     };
   }, [time]);
+
+  useEffect(() => {
+    if (theme === appStyles.light) {
+      seTextColorLight(false)
+    }
+
+    if (theme === appStyles.dark) {
+      seTextColorLight(true)
+    }
+  }, [theme, textColorLight])
 
 
   function getFormattedTime() {
@@ -25,11 +39,19 @@ function Time() {
   const { hours, minutes } = getFormattedTime();
 
   return (
-    <section className={styles.time}>
-      <p>{hours}</p>
-      <p className={styles.colon}>:</p>
-      <p>{minutes}</p>
-    </section>
+    <>
+      {textColorLight ? (
+        <section className={`${styles.time} ${styles.time_white}`}>
+          <p>{hours}</p>
+          <p className={styles.colon}>:</p>
+          <p>{minutes}</p>
+        </section>)
+        : (<section className={`${styles.time} ${styles.time_dark}`}>
+          <p>{hours}</p>
+          <p className={styles.colon}>:</p>
+          <p>{minutes}</p>
+        </section>)}
+    </>
   )
 };
 

@@ -8,6 +8,15 @@
   animation: blink 2s linear infinite;
 }
 
+.time_white {
+  color: white;
+}
+
+.time_dark {
+  color: #4a4a4a;
+}
+
+
 @keyframes blink {
   0% {
     opacity: 0%;
