@@ -12,18 +12,23 @@ function Weather() {
       .then((res) => setweather(res))
       .catch(err => console.log(err))
 
-      const interval = setInterval(getCurrentWeather, weatherUpdateInterval);
+    const interval = setInterval(getCurrentWeather, weatherUpdateInterval);
 
-      return () => clearInterval(interval);
+    return () => clearInterval(interval);
   }, []);
 
-  if(!weather || weather === null) {
+  if (!weather || weather === null) {
     return <div>fffff</div>
   }
 
   return (
     <div>
-      {weather && <header className={styles.weather}>{`${weather.current.temp_c} °C`}</header>}
+      {weather &&
+        <div className={styles.weather}>
+          <header className={styles.weather__temp}>{weather.current.temp_c}</header>
+          <span className={styles.weather__celsius}>&#176;C</span>
+        </div>
+      }
     </div>
   );
 }

@@ -35,8 +35,8 @@ function WeekNumber() {
 
   return (
     <>
-      {!textColorLight ? (<p className={styles.text_dark}>{weekNumber} неделя</p>)
-        : (<p className={styles.text_white}>{weekNumber} неделя</p>)}
+      {!textColorLight ? (<p className={`${styles.text} ${styles.text_dark}`}>{weekNumber} неделя года</p>)
+        : (<p className={`${styles.text} ${styles.text_white}`}>{weekNumber} неделя года</p>)}
     </>
   )
 };

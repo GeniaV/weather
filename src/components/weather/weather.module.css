@@ -1,0 +1,21 @@
+.weather__temp {
+  margin: 0;
+  padding: 0;
+  font-size: 565px;
+  font-weight: 900;
+  font-family: 'Montserrat';
+  line-height: 689px;
+  background: linear-gradient(177.62deg, #bdff00 66.64%, rgba(255, 230, 5, 0.08) 98%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: -21px 4px 43px rgba(255, 255, 255, 0.1);
+}
+
+.weather__celsius {
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: 200px;
+  line-height: 244px;
+  color: #ddfa48;
+}

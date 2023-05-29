@@ -12,6 +12,13 @@
   background-color: #1c1c1c;
 }
 
+.city {
+  font-family: 'Montserrat';
+  font-weight: 800;
+  font-size: 130px;
+  line-height: 0%;
+}
+
 .city_white {
   color: white;
 }

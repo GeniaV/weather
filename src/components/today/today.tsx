@@ -24,12 +24,12 @@ function Today() {
     year = 'numeric',
   };
 
-  const formattedDate = date.toLocaleDateString('ru-Ru', options);
+  const formattedDate = date.toLocaleDateString('ru-Ru', options).slice(0, -3);;
 
   return (
     <>
-      {!textColorLight ? (<p className={styles.text_dark}>{formattedDate}</p>)
-        : (<p className={styles.text_white}>{formattedDate}</p>)}
+      {!textColorLight ? (<p className={`${styles.text} ${styles.text_dark}`}>{formattedDate}</p>)
+        : (<p className={`${styles.text} ${styles.text_white}`}>{formattedDate}</p>)}
     </>
   )
 };
