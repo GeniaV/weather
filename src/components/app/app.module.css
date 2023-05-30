@@ -1,22 +1,38 @@
 .main {
   text-align: center;
   height: 100vh;
-  width: 100vw;
+  padding-left: 120px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+
+.city_weather {
+  max-width: 785px;
+  position: relative;
 }
 
 #light {
   background-color: white;
+  transition: .4s;
 }
 
 #dark {
   background-color: #1c1c1c;
+  transition: .4s;
 }
 
 .city {
   font-family: 'Montserrat';
   font-weight: 800;
   font-size: 130px;
-  line-height: 0%;
+  padding: 0;
+  position: absolute;
+  top: 380px;
+  left: 20%;
+  margin: 0;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .city_white {
@@ -25,4 +41,14 @@
 
 .city_dark {
   color: #4a4a4a;
+}
+
+.today {
+  display: flex;
+  flex-direction: column;
+  max-width: 785px;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
 }

@@ -42,14 +42,14 @@ function Time() {
     <>
       {textColorLight ? (
         <section className={`${styles.time} ${styles.time_white}`}>
-          <p>{hours}</p>
+          <p className={styles.time__numbers}>{hours}</p>
           <p className={styles.colon}>:</p>
-          <p>{minutes}</p>
+          <p className={styles.time__numbers}>{minutes}</p>
         </section>)
         : (<section className={`${styles.time} ${styles.time_dark}`}>
-          <p>{hours}</p>
+          <p className={styles.time__numbers}>{hours}</p>
           <p className={styles.colon}>:</p>
-          <p>{minutes}</p>
+          <p className={styles.time__numbers}>{minutes}</p>
         </section>)}
     </>
   )

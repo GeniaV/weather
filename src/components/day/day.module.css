@@ -2,6 +2,8 @@
   font-family: 'Montserrat';
   font-weight: 400;
   font-size: 41px;
+  margin: 0;
+  line-height: 90%;
 }
 
 .text_white {

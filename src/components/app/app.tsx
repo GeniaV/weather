@@ -22,17 +22,19 @@ function App() {
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div className={styles.main} id={theme}>
-        <Weather />
-        {!cityColorLight ? <h2 className={`${styles.city} ${styles.city_dark}`}>{city === 'Moscow' && 'Mосква'}</h2>
-          : <h2 className={`${styles.city} ${styles.city_white}`}>{city === 'Moscow' && 'Mосква'}</h2>}
-        <section>
+        <section className={styles.city_weather}>
+          <Weather />
+          {!cityColorLight ? <h2 className={`${styles.city} ${styles.city_dark}`}>{city === 'Moscow' && 'Mосква'}</h2>
+            : <h2 className={`${styles.city} ${styles.city_white}`}>{city === 'Moscow' && 'Mосква'}</h2>}
+        </section>
+        <section className={styles.today}>
           <Time />
           <Day />
           <Today />
           <WeekNumber />
-          <Rates />
-          <ThemeToggle />
         </section>
+        <Rates />
+        <ThemeToggle />
       </div>
     </ThemeContext.Provider>
   );

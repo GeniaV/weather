@@ -2,6 +2,12 @@
   position: relative;
   width: 270px;
   height: 110px;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  align-self: center;
+  justify-self: center;
 }
 
 .toggle__input {
