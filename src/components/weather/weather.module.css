@@ -16,7 +16,6 @@
   font-size: 565px;
   font-weight: 900;
   font-family: 'Montserrat';
-  line-height: 689px;
   background: linear-gradient(177.62deg, #bdff00 66.64%, rgba(255, 230, 5, 0.08) 98%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -26,9 +25,6 @@
 }
 
 .weather__celsius {
-  position: absolute;
-  right: -5px;
-  top: -2%;
   font-family: 'Montserrat';
   font-weight: 500;
   font-size: 150px;
@@ -36,4 +32,33 @@
   color: #ddfa48;
   margin: 0;
   padding: 0;
+}
+
+
+@media screen and (max-width: 1600px) {
+  .weather__temp {
+    font-size: 400px;
+  }
+  .weather__celsius {
+    font-size: 110px;
+  }
+}
+
+@media screen and (max-width: 1182px) {
+  .weather__temp {
+    font-size: 280px;
+  }
+  .weather__celsius {
+    font-size: 80px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .weather__temp {
+    font-size: 150px;
+     line-height: 150px;
+  }
+  .weather__celsius {
+    line-height: 50px;
+  }
 }

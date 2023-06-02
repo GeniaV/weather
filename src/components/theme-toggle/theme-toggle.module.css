@@ -174,3 +174,10 @@
   top: -25%;
   transform: rotate(45deg);
 }
+
+
+@media screen and (max-width: 900px) {
+  .toggle {
+    margin-bottom: 20px;
+  }
+}

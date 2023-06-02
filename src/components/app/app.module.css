@@ -1,12 +1,12 @@
 .main {
   text-align: center;
   height: 100vh;
-  padding-left: 120px;
+  padding-left: 80px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  max-width: 1920px;
 }
-
 
 .city_weather {
   max-width: 785px;
@@ -51,4 +51,36 @@
   grid-column-end: 2;
   grid-row-start: 2;
   grid-row-end: 3;
+}
+
+@media screen and (max-width: 1600px) {
+  .city {
+    font-size: 90px;
+    top: 280px;
+  }
+}
+
+@media screen and (max-width: 1182px) {
+  .city {
+    font-size: 78px;
+    top: 200px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 10px 10px 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  .city {
+    font-size: 60px;
+    top: 100px;
+    left: 0;
+  }
+  .city_weather {
+    margin-bottom: 60px;
+  }
 }

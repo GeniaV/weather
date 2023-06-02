@@ -12,3 +12,9 @@
 .text_dark {
   color: #4a4a4a;
 }
+
+@media screen and (max-width: 1182px) {
+  .text {
+    font-size: 30px;
+  }
+}

@@ -26,6 +26,17 @@
   color: #4a4a4a;
 }
 
+@media screen and (max-width: 1182px) {
+  .time {
+    font-size: 80px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .time {
+    font-size: 55px;
+  }
+}
 
 @keyframes blink {
   0% {
