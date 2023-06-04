@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getCurrencyRates } from "../../utils/api";
 import { ICurrancyResponse } from "../../utils/types";
 import styles from "./rates.module.css";
+import Preloader from "../../preloader/preloder";
 
 function Rates() {
   const [dollarToRubleExchangeRate, setDollarToRubleExchangeRate] = useState<ICurrancyResponse | null>(null);
@@ -21,7 +22,7 @@ function Rates() {
 
   if ((!dollarToRubleExchangeRate || dollarToRubleExchangeRate === null)
     || (!euroToRubleExchangeRate || euroToRubleExchangeRate === null)) {
-    return <div>fffff</div>
+    return <Preloader />
   }
 
   return (

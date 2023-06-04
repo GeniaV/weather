@@ -3,6 +3,7 @@ import { ICurrentWeather } from "../../utils/types";
 import { getCurrentWeather } from "../../utils/api";
 import { weatherUpdateInterval } from "../../utils/constants";
 import styles from './weather.module.css';
+import Preloader from "../../preloader/preloder";
 
 function Weather() {
   const [weather, setweather] = useState<ICurrentWeather | null>(null);
@@ -18,7 +19,7 @@ function Weather() {
   }, []);
 
   if (!weather || weather === null) {
-    return <div>fffff</div>
+    return <Preloader />
   }
 
   return (
