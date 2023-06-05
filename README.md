@@ -23,6 +23,10 @@
 
 ![Темная тема](README_static/weather_dark-theme.png)
 
+![Cмена темы](README_static/desktop_preview3.gif)
+
+![Вид на смартфоне](README_static/mobile-preview.jpg)
+
 ## Stack
 HTML, CSS, JavaScript, React, TypeScript
 
